@@ -35,49 +35,12 @@ data_test['Intensity_Class'] = data_test.Intensity_Class.cat.codes
 
 
 
-class_count = data_train['Intensity_Class'].value_counts()
-
-x = np.array(class_count.index)
-y = np.array(class_count.values)
-plt.figure(figsize=(8,7))
-sns.barplot(x,y)
-plt.xlabel('Valence')
-plt.ylabel('Number of categories')
-plt.show()
 
 
 stop_words = set(stopwords.words('english'))
 stop_words.update(["now","let", 'zero', 'one', 'two', 'three','four','five','six','seven','eight','nine','ten','may','also','across','among','beside','however','yet','within'])
 re_stop_words = re.compile(r"\b(" + "|".join(stop_words) + ")\\W", re.I)
 
-def show_wordcloud(data, title = None):
-    wordcloud = WordCloud(
-        background_color='black',
-        stopwords=stop_words,
-        max_words=200,
-        max_font_size=40,
-        scale=3,
-        random_state=1 # chosen at random by flipping a coin; it was heads
-).generate(str(data))
-
-    fig = plt.figure(1, figsize=(15, 15))
-    plt.axis('off')
-    if title:
-        fig.suptitle(title, fontsize=20)
-        #fig.subplots_adjust(top=2.3)
-
-    plt.imshow(wordcloud)
-    plt.show()
-
-
-#show_wordcloud(data_train['Tweet'],'Most Common Words from the whole corpus')
-#show_wordcloud(data_train[data_train['Intensity_Class'] == 0]['Tweet'],'very negative emotional state can be inferred')
-#show_wordcloud(data_train[data_train['Intensity_Class'] == 1]['Tweet'],'moderately negative emotional state can be inferred')
-#show_wordcloud(data_train[data_train['Intensity_Class'] == 2]['Tweet'],'slightly negative emotional state can be inferred')
-#show_wordcloud(data_train[data_train['Intensity_Class'] == 3]['Tweet'],'neutral or mixed emotional state can be inferred')
-#show_wordcloud(data_train[data_train['Intensity_Class'] == 4]['Tweet'],'slightly positive emotional state can be inferred')
-#show_wordcloud(data_train[data_train['Intensity_Class'] == 5]['Tweet'],'moderately positive emotional state can be inferred')
-#show_wordcloud(data_train[data_train['Intensity_Class'] == 6]['Tweet'],'very positive emotional state can be inferred')
 
 
 #Removing Stop Words
