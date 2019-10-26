@@ -13,11 +13,11 @@ stemmer = PorterStemmer()
 
 #import dataset as dataframe
 
-data_train = pd.read_csv('/home/konstantinos/PycharmProjects/Affect/DIPLOMATIC/2018-Valence-oc-En-train.txt', sep='\t', error_bad_lines=False)
+data_train = pd.read_csv('~/2018-Valence-oc-En-train.txt', sep='\t', error_bad_lines=False)
 data_train.columns = ["ID", "Tweet", "Affect_Dimension", "Intensity_Class"]
-data_dev = pd.read_csv('/home/konstantinos/PycharmProjects/Affect/DIPLOMATIC/2018-Valence-oc-En-dev .txt', sep='\t', error_bad_lines=False)
+data_dev = pd.read_csv('~/2018-Valence-oc-En-dev .txt', sep='\t', error_bad_lines=False)
 data_dev.columns = ["ID", "Tweet", "Affect_Dimension", "Intensity_Class"]
-data_test= pd.read_csv("/home/konstantinos/PycharmProjects/Affect/DIPLOMATIC/SemEval2018-Task1-all-data/SemEval2018-Task1-all-data/English/V-oc/2018-Valence-oc-En-test-gold.txt", sep='\t', error_bad_lines=False)
+data_test= pd.read_csv("~/2018-Valence-oc-En-test-gold.txt", sep='\t', error_bad_lines=False)
 data_test.columns = ["ID", "Tweet", "Affect_Dimension", "Intensity_Class"]
 
 frames = [data_train,data_dev]
