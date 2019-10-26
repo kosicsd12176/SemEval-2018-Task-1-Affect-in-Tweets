@@ -25,7 +25,7 @@ test['Intensity_Class'] = pd.Categorical(test['Intensity_Class'])
 test['Intensity_Class'] = test.Intensity_Class.cat.codes
 
 
-
+#set stopwords
 stop_words = set(stopwords.words('english'))
 stop_words.update(["now","let", 'zero', 'one', 'two', 'three','four','five','six','seven','eight','nine','ten','may','also','across','among','beside','however','yet','within'])
 re_stop_words = re.compile(r"\b(" + "|".join(stop_words) + ")\\W", re.I)
@@ -146,5 +146,4 @@ model3_LSTM.summary()
 
 history3=model3_LSTM.fit(X_train, Y_train, validation_data=(X_val, Y_val),epochs=epochs, batch_size=batch_size, verbose=1)
 
-y_pred3=model3_LSTM.predict_classes(X_test, verbose=1)
 
