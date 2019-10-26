@@ -136,14 +136,5 @@ model2_GRU.summary()
 
 history2=model2_GRU.fit(X_train, Y_train, validation_data=(X_val, Y_val),epochs=epochs, batch_size=batch_size, verbose=1)
 
-model3_LSTM=Sequential()
-model3_LSTM.add(Embedding(max_features,100,mask_zero=True))
-model3_LSTM.add(LSTM(64,dropout=0.4,return_sequences=True))
-model3_LSTM.add(LSTM(32,dropout=0.5,return_sequences=False))
-model3_LSTM.add(Dense(num_classes,activation='sigmoid'))
-model3_LSTM.compile(loss='binary_crossentropy',optimizer=Adam(lr = 0.001),metrics=['accuracy'])
-model3_LSTM.summary()
-
-history3=model3_LSTM.fit(X_train, Y_train, validation_data=(X_val, Y_val),epochs=epochs, batch_size=batch_size, verbose=1)
 
 
