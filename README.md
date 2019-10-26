@@ -4,4 +4,4 @@ Background and Significance: We use language to communicate not only the emotion
 
 Tasks: We present an array of tasks where systems have to automatically determine the intensity of emotions (E) and intensity of sentiment (aka valence V) of the tweeters from their tweets. (The term tweeter refers to the person who has posted the tweet.) We also include a multi-label emotion classification task for tweets. For each task, we provide separate training and test datasets for English.The individual tasks are described below:
 
-1. V-oc (a sentiment analysis, ordinal classification, task): Given a tweet, classify it into one of seven ordinal classes, corresponding to various levels of positive and negative sentiment intensity, that best represents the mental state of the tweeter.
+1. V-oc (a sentiment analysis, ordinal classification, task): Given a tweet, classify it into one of seven ordinal classes, corresponding to various levels of positive and negative sentiment intensity, that best represents the mental state of the tweeter using 3 different techniques.
