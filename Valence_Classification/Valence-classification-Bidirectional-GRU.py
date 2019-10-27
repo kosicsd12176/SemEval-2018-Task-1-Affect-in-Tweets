@@ -7,11 +7,11 @@ stemmer = PorterStemmer()
 
 #import dataset as dataframe
 
-train = pd.read_csv('/home/konstantinos/PycharmProjects/Affect/DIPLOMATIC/2018-Valence-oc-En-train.txt', sep='\t', error_bad_lines=False)
+train = pd.read_csv('~/2018-Valence-oc-En-train.txt', sep='\t', error_bad_lines=False)
 train.columns = ["ID", "Tweet", "Affect_Dimension", "Intensity_Class"]
-dev = pd.read_csv('/home/konstantinos/PycharmProjects/Affect/DIPLOMATIC/2018-Valence-oc-En-dev .txt', sep='\t', error_bad_lines=False)
+dev = pd.read_csv('~/2018-Valence-oc-En-dev .txt', sep='\t', error_bad_lines=False)
 dev.columns = ["ID", "Tweet", "Affect_Dimension", "Intensity_Class"]
-test= pd.read_csv("/home/konstantinos/PycharmProjects/Affect/DIPLOMATIC/SemEval2018-Task1-all-data/SemEval2018-Task1-all-data/English/V-oc/2018-Valence-oc-En-test-gold.txt", sep='\t', error_bad_lines=False)
+test= pd.read_csv("~/SemEval2018-Task1-all-data/SemEval2018-Task1-all-data/English/V-oc/2018-Valence-oc-En-test-gold.txt", sep='\t', error_bad_lines=False)
 test.columns = ["ID", "Tweet", "Affect_Dimension", "Intensity_Class"]
 
 train['Intensity_Class'] = pd.Categorical(train['Intensity_Class'])
