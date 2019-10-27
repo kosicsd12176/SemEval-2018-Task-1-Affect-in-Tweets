@@ -4,4 +4,46 @@ Background and Significance: We use language to communicate not only the emotion
 
 Tasks: We present an array of tasks where systems have to automatically determine the intensity of emotions (E) and intensity of sentiment (aka valence V) of the tweeters from their tweets. (The term tweeter refers to the person who has posted the tweet.) We also include a multi-label emotion classification task for tweets. For each task, we provide separate training and test datasets for English.The individual tasks are described below:
 
-1. V-oc (a sentiment analysis, ordinal classification, task): Given a tweet, classify it into one of seven ordinal classes, corresponding to various levels of positive and negative sentiment intensity, that best represents the mental state of the tweeter using 3 different techniques.
+1. Task EI-oc: Detecting Emotion Intensity (ordinal classification)
+
+Given:
+
+    a tweet
+
+    an emotion E (anger, fear, joy, or sadness)
+
+Task: classify the tweet into one of four ordinal classes of intensity of E that best represents the mental state of the tweeter:
+
+    0: no E can be inferred
+
+    1: low amount of E can be inferred
+
+    2: moderate amount of E can be inferred
+
+    3: high amount of E can be inferred
+
+For each language: 4 training sets and 4 test sets: one for each emotion E.
+
+2. Task V-oc: Detecting Valence (ordinal classification) -- This is the traditional Sentiment Analysis Task
+
+Given:
+
+    a tweet
+
+Task: classify the tweet into one of seven ordinal classes, corresponding to various levels of positive and negative sentiment intensity, that best represents the mental state of the tweeter:
+
+    3: very positive mental state can be inferred
+
+    2: moderately positive mental state can be inferred
+
+    1: slightly positive mental state can be inferred
+
+    0: neutral or mixed mental state can be inferred
+
+    -1: slightly negative mental state can be inferred
+
+    -2: moderately negative mental state can be inferred
+
+    -3: very negative mental state can be inferred
+
+For each language: 1 training set, 1 test set. 
