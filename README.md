@@ -1,4 +1,4 @@
-# SemEval-2018-Task-1-Affect-in-Tweets
+# Affect-in-Tweets
 Affect in Tweets, which includes an array of subtasks on inferring the affectual state of a person from their tweet.
 Background and Significance: We use language to communicate not only the emotion or sentiment we are feeling but also the intensity of the emotion or sentiment. For example, our utterances can convey that we are very angry, slightly sad, absolutely elated, etc. Here, intensity refers to the degree or amount of an emotion or degree of sentiment. We will refer to emotion-related categories such as anger, fear, sentiment, and arousal, by the term affect. Existing affect datasets are mainly annotated categorically without an indication of intensity. Further, past shared tasks have almost always been framed as classification tasks (identify one among n affect categories for this sentence). In contrast, it is often useful for applications to know the degree to which affect is expressed in text.
 
