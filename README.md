@@ -22,7 +22,7 @@ Task: classify the tweet into one of four ordinal classes of intensity of E that
 
     3: high amount of E can be inferred
 
-For english language: 4 training sets and 4 test sets: one for each emotion E.
+For english language: 4 training sets, 4 validation sets and 4 test sets: one for each emotion E.
 
 2. Task V-oc: Detecting Valence (ordinal classification) -- This is the traditional Sentiment Analysis Task
 
@@ -46,6 +46,6 @@ Task: classify the tweet into one of seven ordinal classes, corresponding to var
 
     -3: very negative mental state can be inferred
 
-For english language: 1 training set, 1 test set. 
+For english language: 1 training set, 1 validation sets 1 test set. 
 
 Dataset repository:https://competitions.codalab.org/competitions/17751
